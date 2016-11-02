@@ -11,29 +11,63 @@ class User {
     }
 
     print() {
-        return '<img src=\"' + this.imgURL + '\" align="left" /><br>' +
-            "First name: " + this.fname + "<br>Last name: " + "<br>Age: " + this.age + "<br><hr>Email: " + this.email;
-        console.log('<img src=\"' + this.email + '\" align="left" /><br>');
+        return '<div id="common"><div id="imgDiv" align="left"><img align="right" height="220px" src="' + this.imgURL + '"></div>' +
+            '<div id="infoDiv" align="right"><p>First name: ' + this.fname + '</p><p>Last name: ' + this.lname + '</p><p>Age: ' + this.age + '</p><hr><p>Email: ' + this.email + '</p></div></div>';
     }
 }
 
 
 var arrUser = [];
 
-function btnSendClick(){
+function checkName(name){
+    return name.match(/([A-я]+[,.]?[ ]?|[A-я]+['-]?)+$/) != null;
+}
+
+function checkAge(age){
+    return !isNaN(parseFloat(age)) && isFinite(age) && age > 0 && age <= 125 && age % 1 === 0;
+}
+
+function checkEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function checkImgURL(imgURL){
+    return imgURL.match(/(https?:\/\/.*\.(?:png|jpg|jpeg|ico))/) != null;
+}
+
+function checkAll(fname, lname, age, email, imgURL){
+    if (!(checkName(fname) && checkName(lname))) {
+        document.getElementById("status").innerHTML = "First/Last name error. User wasn't added";
+        return false;
+    }
+    if(!checkAge(age)){
+        document.getElementById("status").innerHTML = "Age error. User wasn't added";
+        return false;
+    }
+    if(!checkEmail(email)){
+        document.getElementById("status").innerHTML = "E-mail error. User wasn't added";
+        return false;
+    }
+    if(!checkImgURL(imgURL)){
+        document.getElementById("status").innerHTML = "Image URL error. User wasn't added";
+        return false;
+    }
+    return true;
+}
+
+function btnSendClick() {
     let data = {};
     data.fname = document.getElementById("fname").value;
     data.lname = document.getElementById("lname").value;
     data.age = document.getElementById("age").value;
     data.email = document.getElementById("email").value;
     data.imgURL = document.getElementById("imgURL").value;
-
-    if(data.fname != "" && data.lname != "" && data.age > 0 && data.age < 125) {
-        let objUser = new User(data.fname, data.lname, data.age, data.email, data.imgURL);
-        arrUser.push(objUser);
-        objUser.print();
-    }
-    else document.getElementById("status").innerHTML = "Input error";
+    if(!checkAll(data.fname, data.lname, data.age, data.email, data.imgURL))
+        return;
+    let objUser = new User(data.fname, data.lname, data.age, data.email, data.imgURL);
+    arrUser.push(objUser);
+    document.getElementById("status").innerHTML = "User was added";
 }
 
 function clearPage(){
