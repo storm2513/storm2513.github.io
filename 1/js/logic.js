@@ -97,7 +97,7 @@ function btnPrintClick(){
     clearPage();
     let body = document.body;
     let contents = '<div id="content">\n';
-    contents += '<button id="back" onclick="btnBack()">Back</button>';
+    contents += '<div id = "block"><h1>LevelUP-JS 2016</h1><h2>Users in system</h2><button id="back" onclick="btnBack()">Back</button></div>';
     for (let i = 0; i < arrUser.length; i++){
         contents += "<p>"  + arrUser[i].print() + "</p>\n";
     }

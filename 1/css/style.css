@@ -10,7 +10,7 @@ h1 {
 h2 {
     color: #111;
     font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 300;
     line-height: 32px;
     margin: 0 0 2px;
@@ -20,9 +20,9 @@ button{
     background-color: #4CAF50;
     border-radius: 5px;
     border: none;
-    color:white;
-    padding: 15px 32px;
-    text-align:center;
+    color: white;
+    padding: 15px 43px;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 22px;
@@ -32,16 +32,16 @@ button:hover {
     background-color: blue;
     border-radius: 5px;
     border: none;
-    color:white;
-    padding: 15px 32px;
-    text-align:center;
+    color: white;
+    padding: 15px 43px;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 22px;
     font-family: 'Lato';
 }
 input{
-    width: 260px;
+    width: 300px;
     border: 1px solid darkorange;
     border-radius: 5px;
     padding: 10px;
@@ -50,7 +50,8 @@ input{
     font-size: 21px;
     font-family: 'Lato';
 }
-span { color: darkred;
+span {
+    color: darkred;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 20px;
     line-height: 24px;
@@ -60,16 +61,16 @@ span { color: darkred;
 }
 #imgDiv{
     background-color: white;
-    width:40%;
-    height:230px;
-    float:left;
+    width: 40%;
+    height: 230px;
+    float: left;
     border-radius: 5px;
 }
 #infoDiv{
     background-color: white;
-    width:60%;
-    height:230px;
-    float:right;
+    width: 60%;
+    height: 230px;
+    float: right;
     border-radius: 5px;
 }
 #infoDiv p{
@@ -78,4 +79,26 @@ span { color: darkred;
     text-align: left;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 30px;
+}
+#block{
+    width: 40%;
+    margin: 40px;
+}
+#block h1 {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: left;
+}
+#block h2 {
+    color: #111;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 50px;
+    margin: 0 0 2px;
+    text-align: left;
 }
