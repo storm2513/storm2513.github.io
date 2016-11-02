@@ -39,14 +39,14 @@ span { color: darkred; font-family: 'Helvetica Neue', sans-serif; font-size: 20p
 
 #imgDiv{
     background-color: white;
-    width:30%;
+    width:40%;
     height:230px;
     float:left;
     border-radius: 5px;
 }
 #infoDiv{
     background-color: white;
-    width:69%;
+    width:60%;
     height:230px;
     float:right;
     border-radius: 5px;
