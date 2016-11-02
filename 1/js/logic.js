@@ -13,16 +13,16 @@ class User {
     print() {
         $color = "white";
         changeBackground($color);
-        return '<div id="common"><div id="imgDiv" align="left"><img align="right" height="220px" src="' + this.imgURL + '"></div>' +
-            '<div id="infoDiv" align="right"><p>First name: ' + this.fname + '</p><p>Last name: ' + this.lname + '</p><p>Age: ' + this.age + '</p><hr><p>Email: ' + this.email + '</p></div></div>';
+        return '<div id="imgDiv" align="left"><img align="right" height="220px" src="' + this.imgURL + '"></div>' +
+            '<div id="infoDiv" align="right"><p>First name: ' + this.fname + '</p><p>Last name: ' + this.lname + '</p><p>Age: ' + this.age + '</p><hr><p>Email: ' + this.email + '</p></div>';
     }
 }
-$color = "darkorange";
+var $color = "darkorange";
+var arrUser = [];
+
 function changeBackground(color) {
     document.body.style.background = color;
 }
-
-var arrUser = [];
 
 function checkName(name){
     return name.match(/([A-я]+[,.]?[ ]?|[A-я]+['-]?)+$/) != null;
@@ -38,7 +38,7 @@ function checkEmail(email) {
 }
 
 function checkImgURL(imgURL){
-    return imgURL.match(/(https?:\/\/.*\.(?:png|jpg|jpeg|ico))/) != null;
+    return imgURL.match(/(https?:\/\/.*\.(?:png|jpg|jpeg|ico|gif))/) != null;
 }
 
 function checkAll(fname, lname, age, email, imgURL){
@@ -87,8 +87,8 @@ function clearPage(){
 function savePage(){
     savedState = document.body.innerHTML;
 }
-
 var savedState;
+
 function btnPrintClick(){
     if (arrUser.length == 0) {
         document.getElementById("status").innerHTML = "There are no users :(";
@@ -96,8 +96,8 @@ function btnPrintClick(){
     }
     clearPage();
     let body = document.body;
-    let contents = "<div>\n";
-    contents += '<button onclick="btnBack()">Back</button>';
+    let contents = '<div id="content">\n';
+    contents += '<button id="back" onclick="btnBack()">Back</button>';
     for (let i = 0; i < arrUser.length; i++){
         contents += "<p>"  + arrUser[i].print() + "</p>\n";
     }
