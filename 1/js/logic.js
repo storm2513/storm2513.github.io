@@ -11,11 +11,16 @@ class User {
     }
 
     print() {
+        $color = "white";
+        changeBackground($color);
         return '<div id="common"><div id="imgDiv" align="left"><img align="right" height="220px" src="' + this.imgURL + '"></div>' +
             '<div id="infoDiv" align="right"><p>First name: ' + this.fname + '</p><p>Last name: ' + this.lname + '</p><p>Age: ' + this.age + '</p><hr><p>Email: ' + this.email + '</p></div></div>';
     }
 }
-
+$color = "darkorange";
+function changeBackground(color) {
+    document.body.style.background = color;
+}
 
 var arrUser = [];
 
@@ -68,6 +73,11 @@ function btnSendClick() {
     let objUser = new User(data.fname, data.lname, data.age, data.email, data.imgURL);
     arrUser.push(objUser);
     document.getElementById("status").innerHTML = "User was added";
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("imgURL").value = "";
 }
 
 function clearPage(){
@@ -92,9 +102,11 @@ function btnPrintClick(){
         contents += "<p>"  + arrUser[i].print() + "</p>\n";
     }
     contents += "</div>";
-    body.innerHTML = contents
+    body.innerHTML = contents;
 }
 
 function btnBack(){
+    $color = "darkorange";
+    changeBackground($color);
     document.body.innerHTML = savedState;
 }

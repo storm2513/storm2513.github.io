@@ -5,16 +5,16 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>Hometask 1</title>
 </head>
-<body onload="savePage()" style="background-color: darkorange">
+<body onload="savePage(); changeBackground($color)" >
 <div class="header" align="center">
     <H1>LevelUP-JS 2016</H1>
     <h2>Register in system</h2>
     <span id="status"></span><br>
-    <input type="text" placeholder="First name" id="fname"><br>
-    <input type="text" placeholder="Last name" id="lname"><br>
-    <input type="number" placeholder="Age" id="age"><br>
-    <input type="text" placeholder="Email" id="email"><br>
-    <input type="text" placeholder="Image URL" id="imgURL"><br>
+    <input type="text" title="Vasiliy" placeholder="First name" id="fname"><br>
+    <input type="text" placeholder="Last name" title="Pupkin" id="lname"><br>
+    <input type="number" placeholder="Age" title="18" id="age"><br>
+    <input type="text" placeholder="Email" title="vasya@mail.ru" id="email"><br>
+    <input type="text" placeholder="Image URL" title="https://vk.com/vasia/image.png" id="imgURL"><br>
     <button onclick="btnSendClick()">Send</button>
     <button onclick="btnPrintClick()">Show users</button>
 </div>

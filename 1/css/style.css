@@ -3,16 +3,30 @@ h2 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-we
 button{
     background-color: #4CAF50;
     border-radius: 5px;
-
     border: none;
     color:white;
     padding: 15px 32px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 22px;
+    font-family: 'Lato';
+
+}
+button:hover {
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    color:white;
+    padding: 15px 32px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    font-family: 'Lato';
 }
 input{
+    width: 260px;
     border: 1px solid darkorange;
     border-radius: 5px;
     padding: 10px;
@@ -25,7 +39,6 @@ span { color: darkred; font-family: 'Helvetica Neue', sans-serif; font-size: 20p
 
 #imgDiv{
     background-color: white;
-    border:2px solid blue;
     width:30%;
     height:230px;
     float:left;
@@ -33,7 +46,6 @@ span { color: darkred; font-family: 'Helvetica Neue', sans-serif; font-size: 20p
 }
 #infoDiv{
     background-color: white;
-    border:2px solid blue;
     width:69%;
     height:230px;
     float:right;
