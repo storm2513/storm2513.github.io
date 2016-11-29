@@ -15,6 +15,8 @@ console.log(CONTACTS);
 
 var MAX_COUNT = CONTACTS.length;
 var count = 0;
+count = JSON.parse(localStorage.getItem('count'));
+console.log(count);
 
 var Meme = React.createClass({
     render: function() {
@@ -151,6 +153,9 @@ var MemesApp = React.createClass({
     _updateLocalStorage: function() {
         var memes = JSON.stringify(this.state.memes);
         localStorage.setItem('memes', memes);
+        localStorage.setItem('count', count);
+        console.log(localStorage);
+
     }
 });
 
