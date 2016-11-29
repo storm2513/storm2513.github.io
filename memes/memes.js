@@ -131,6 +131,8 @@ var MemesApp = React.createClass({
         this.setState({ memes: newMemes });
         if(count != 0)
             count -= 1;
+        if(count < 0)
+            count = 0;
     },
 
     handleMemeAdd: function(newMeme) {
