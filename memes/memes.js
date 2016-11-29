@@ -16,8 +16,9 @@ console.log(CONTACTS);
 var MAX_COUNT = CONTACTS.length;
 var count = 0;
 count = JSON.parse(localStorage.getItem('count'));
-if(count < 0 || count === null)
+if(count < 0 || count === null || count == "null")
     count = 0;
+console.log(count === null);
 console.log(count);
 
 var Meme = React.createClass({
