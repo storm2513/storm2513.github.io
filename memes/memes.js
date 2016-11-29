@@ -158,6 +158,8 @@ var MemesApp = React.createClass({
     _updateLocalStorage: function() {
         var memes = JSON.stringify(this.state.memes);
         localStorage.setItem('memes', memes);
+        if(count < 0 || count === null || count == "null")
+            count = 0;
         localStorage.setItem('count', count);
         console.log(localStorage);
 
