@@ -1,0 +1,88 @@
+[
+    {
+        "name":"Философия",
+        "image":"img/phil.jpg"
+    },
+    {
+        "name":"Мужская инфографика",
+        "image":"img/puk.jpg"
+    },
+    {
+        "name":"4 года...",
+        "image":"img/4years.jpg"
+    },
+    {
+        "name":"Отсидел все пары",
+        "image":"img/hard.jpg"
+    },
+    {
+        "name":"Шутка про КСИС",
+        "image":"img/ksis.jpg"
+    },
+    {
+        "name":"Жвакина",
+        "image":"img/jvakina.jpg"
+    },
+    {
+        "name":"Как же всё сдать?",
+        "image":"img/howto.jpg"
+    },
+    {
+        "name":"Когда посмотрел свой рейтинг",
+        "image":"img/rating.jpg"
+    },
+    {
+        "name":"Тыжпраграмист",
+        "image":"img/tyjproger.jpg"
+    },
+    {
+        "name":"Интеграл",
+        "image":"img/slojno.jpg"
+    },
+    {
+        "name":"Шаверма <3",
+        "image":"img/shavuha.jpg"
+    },
+    {
+        "name":"Низкий рейтинг",
+        "image":"img/rate.jpg"
+    },
+
+    {
+        "name":"Гардероб",
+        "image":"img/garderob.jpg"
+    },
+    {
+        "name":"Гуманитарные предметы",
+        "image":"img/guman.jpg"
+    },
+    {
+        "name":"Забыл наушники",
+        "image":"img/headphones.jpg"
+    },
+    {
+        "name":"Бомж vs программист",
+        "image":"img/coder.jpg"
+    },
+    {
+        "name":"Не выделил память - умер",
+        "image":"img/cpp.jpg"
+    },
+    {
+        "name":"Физра",
+        "image":"img/fizra.jpg"
+    },
+    {
+        "name":"Дарт Вейдер",
+        "image":"img/darth.gif"
+    }, {
+    "name":"Принцесса Лея",
+    "image":"img/leia.gif"
+}, {
+    "name":"Люк Скайуокер",
+    "image":"img/luke.gif"
+}, {
+    "name":"Чубакка",
+    "image":"img/chewbacca.gif"
+}
+]
